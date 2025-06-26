@@ -13,13 +13,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const product_route_1 = __importDefault(require("../routes/product.route"));
+const local_route_1 = __importDefault(require("../routes/local.route"));
 const cors_1 = __importDefault(require("cors"));
 const connection_1 = __importDefault(require("../db/connection"));
 class server {
     constructor() {
         this.apiPaths = {
-            productos: "/api/products",
+            locales: "/api/locales",
         };
         this.app = (0, express_1.default)();
         this.port = process.env.PORT || "3000";
@@ -42,7 +42,7 @@ class server {
         });
     }
     routes() {
-        this.app.use(this.apiPaths.productos, product_route_1.default);
+        this.app.use(this.apiPaths.locales, local_route_1.default);
     }
     middlewares() {
         this.app.use((0, cors_1.default)());

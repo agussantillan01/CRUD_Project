@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import db from "../db/connection";
 
-const Product = db.define("Products", {
+const Local = db.define("Locales", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -20,9 +20,9 @@ const Product = db.define("Products", {
     allowNull: false
   }
 }, {
-  tableName: "Products",   
+  tableName: "Locales",   
   timestamps: false         
 });
 
 
-export default Product;
+export default Local;

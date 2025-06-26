@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
 
 const db = new Sequelize(
-  process.env.DB_NAME || "StoreDB",
+  process.env.DB_NAME || "COMERCIO_DB",
   process.env.DB_USER || "root",
   process.env.DB_PASS || "root",
   {

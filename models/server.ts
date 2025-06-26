@@ -1,12 +1,12 @@
 import express, { Application } from "express";
-import storeRoutes from "../routes/product.route";
+import storeRoutes from "../routes/local.route";
 import cors from "cors";
 import db from '../db/connection';
 class server {
   private app: Application;
   private port: string;
   private apiPaths = {
-    productos: "/api/products",
+    locales: "/api/locales",
   };
   constructor() {
     this.app = express();
@@ -32,7 +32,7 @@ class server {
   }
 
   routes() {
-    this.app.use(this.apiPaths.productos, storeRoutes);
+    this.app.use(this.apiPaths.locales, storeRoutes);
   }
 
   middlewares() {

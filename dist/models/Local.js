@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const connection_1 = __importDefault(require("../db/connection"));
-const Products = connection_1.default.define("Products", {
+const Local = connection_1.default.define("Locales", {
     id: {
         type: sequelize_1.DataTypes.INTEGER,
         primaryKey: true,
@@ -24,8 +24,8 @@ const Products = connection_1.default.define("Products", {
         allowNull: false
     }
 }, {
-    tableName: "Products",
+    tableName: "Locales",
     timestamps: false
 });
-exports.default = Products;
-//# sourceMappingURL=products.js.map
+exports.default = Local;
+//# sourceMappingURL=Local.js.map
